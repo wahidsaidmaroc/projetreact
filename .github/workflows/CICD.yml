@@ -20,7 +20,7 @@ jobs:
 
       - name: Run build
         working-directory: snifly
-        run: npm build
+        run: npm run build
 
 
 
