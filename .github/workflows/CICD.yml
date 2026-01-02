@@ -1,8 +1,9 @@
 name: Node.js Test Runner and Publish
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
