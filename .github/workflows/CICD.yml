@@ -9,13 +9,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: cd snifly
-      - run: npm ci
-      - run: npm test
+
+      - name: Install dependencies
+        working-directory: snifly
+        run: npm i
+
+      - name: Run tests
+        working-directory: snifly
+        run: npm test
+
+
 
   publish-gpr:
     needs: build
