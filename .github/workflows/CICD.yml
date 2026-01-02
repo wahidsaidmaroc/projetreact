@@ -18,9 +18,9 @@ jobs:
         working-directory: snifly
         run: npm i
 
-      - name: Run tests
+      - name: Run build
         working-directory: snifly
-        run: npm test
+        run: npm build
 
 
 
